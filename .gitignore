@@ -1,0 +1,49 @@
+# Entorno virtual (venv, .venv, env, etc.)
+venv/
+.venv/
+env/
+*.env/
+
+# Archivos de configuración de entornos virtuales
+pyvenv.cfg
+
+# Archivos generados por Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de caché y logs
+*.log
+.pytest_cache/
+.cache/
+
+# Archivos de configuración de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos generados por Flet (assets, builds, etc.)
+/assets/
+/build/
+/dist/
+*.spec
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de datos temporales o sensibles
+*.db
+*.sqlite
+*.env
+secrets.py
+
+# Directorios de paquetes instalados (si no usas requirements.txt)
+*.egg-info/
+*.egg
+pip-selfcheck.json
+
+# Archivos de compilación de Python
+*.so
+*.dll
