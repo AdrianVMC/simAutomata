@@ -4,6 +4,7 @@ def main(page: ft.Page):
     # Configuración mínima de la página
     page.title = "App Sencilla"
     page.vertical_alignment = "center"
+    page.horizontal_alignment = "center"
     
     # Componentes
     texto = ft.Text("Haz clic en el botón:", size=20)
