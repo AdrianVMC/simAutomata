@@ -3,7 +3,7 @@
 # Variables
 VENV = venv
 PYTHON = $(VENV)/bin/python
-APP = main.py
+APP = -m simautomata.main
 DOCKER_IMAGE = simautomata
 DOCKER_REGISTRY = tu-registro
 PORT = 8550
@@ -19,11 +19,11 @@ run: ## Ejecuta la aplicación con el entorno virtual
 
 dev: ## Ejecuta la app en modo desarrollo con Flet
 	@echo "🔥 Running dev mode..."
-	@flet run $(APP) -d
+	@flet run simautomata/main.py -d
 
 build: ## Empaqueta la app con Flet
 	@echo "📦 Creating app..."
-	@$(PYTHON) -m flet pack $(APP) --name "simAutomata"
+	@$(PYTHON) -m flet pack simautomata/main.py --name "simAutomata"
 
 install: ## Instala las dependencias desde requirements.txt
 	@echo "📌 Installing dependencies..."
