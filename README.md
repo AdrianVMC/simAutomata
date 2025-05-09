@@ -1,4 +1,4 @@
-Case 1 : Windows config
+Caso 1 : Windows config
 # 1. Crear y activar venv
 python -m venv venv
 venv\Scripts\activate
@@ -22,7 +22,7 @@ docker run -p 8550:8550 mi-app
 
 
 
-aso 2: UNIX config
+Caso 2: UNIX config
 # 1. Clonar repositorio (o crear estructura)
 git clone tu-repo.git && cd tu-repo
 
