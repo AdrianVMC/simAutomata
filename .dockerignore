@@ -6,6 +6,7 @@ venv/
 env/
 *.env
 .env*
+storage/ 
 
 ### Caché y archivos temporales ###
 __pycache__/

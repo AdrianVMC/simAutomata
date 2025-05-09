@@ -3,6 +3,7 @@ venv/
 .venv/
 env/
 *.env/
+/storage/
 
 # Archivos de configuración de entornos virtuales
 pyvenv.cfg
