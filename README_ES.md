@@ -40,12 +40,14 @@ git clone https://github.com/AdrianVMC/simAutomata.git
 cd simAutomata
 ```
 
-### 2. Ejecutar el simulador
+### 2. Construir el contenedor
 
+```bash
+make docker-build
+```
 ```bash
 make docker-run
 ```
-
 Esto hará lo siguiente:
 - Construirá una imagen Docker con todo lo necesario
 - Iniciará la aplicación en el puerto `8550`
