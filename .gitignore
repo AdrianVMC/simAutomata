@@ -1,54 +1,49 @@
-# Entorno virtual (venv, .venv, env, etc.)
+# === Entornos virtuales ===
 venv/
 .venv/
 env/
-*.env/
-/storage/
-
-# Archivos de configuración de entornos virtuales
 pyvenv.cfg
 
-# Archivos generados por Python
+# === Configuración de entorno y secretos ===
+*.env
+*.env.*
+secrets.py
+config_local.py
+
+# === Cache y archivos temporales de Python ===
 __pycache__/
 *.py[cod]
 *$py.class
-
-# Archivos de caché y logs
-*.log
 .pytest_cache/
 .cache/
+.mypy_cache/
+coverage.xml
+htmlcov/
 
-# Archivos de configuración de IDE
+# === Archivos de logs y bases de datos locales ===
+*.log
+*.db
+*.sqlite
+
+# === Archivos de builds y paquetes ===
+build/
+dist/
+*.egg-info/
+*.egg
+*.spec
+
+# === Salidas y directorios de usuario/generados ===
+storage/
+assets/
+*.zip
+*.tar.gz
+
+# === Configuraciones de IDEs/editores ===
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Archivos generados por Flet (assets, builds, etc.)
-/assets/
-/build/
-/dist/
-*.spec
-
-# Archivos de sistema
+# === Archivos del sistema operativo ===
 .DS_Store
 Thumbs.db
-
-# Archivos de datos temporales o sensibles
-*.db
-*.sqlite
-*.env
-secrets.py
-
-# Directorios de paquetes instalados (si no usas requirements.txt)
-*.egg-info/
-*.egg
-pip-selfcheck.json
-
-# Archivos de compilación de Python
-*.so
-*.dll
-
-# Archivos del sistema operativo / IDE
-.DS_Store
-.vscode/
