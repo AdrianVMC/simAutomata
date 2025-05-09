@@ -43,10 +43,10 @@ cd simAutomata
 ### 2. Build and run the app
 
 ```bash
-make docker-run
+make docker-build
 ```
 ```bash
-make docker-build
+make docker-run
 ```
 
 This will:
