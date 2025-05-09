@@ -64,9 +64,12 @@ docker-push: docker-build ## Empuja la imagen al registro Docker
 	@docker tag $(DOCKER_IMAGE):latest $(DOCKER_REGISTRY)/$(DOCKER_IMAGE):latest
 	@docker push $(DOCKER_REGISTRY)/$(DOCKER_IMAGE):latest
 
-docker-clean: ## Elimina recursos no utilizados de Docker
-	@echo "🧼 Cleaning Docker artifacts..."
-	@docker system prune -f --filter "label=maintainer=$(DOCKER_IMAGE)"
+docker-clean:  ## Eliminar contenedor e imagen Docker no utilizados
+	@echo "🧹 Limpiando recursos Docker..."
+	-docker stop $(DOCKER_CONTAINER) 2>/dev/null || true
+	-docker rm $(DOCKER_CONTAINER) 2>/dev/null || true
+	-docker rmi $(DOCKER_IMAGE) 2>/dev/null || true
+	docker system prune -f --filter "label=maintainer=$(DOCKER_IMAGE)"
 
 # ---------------
 # Ayuda del Makefile
