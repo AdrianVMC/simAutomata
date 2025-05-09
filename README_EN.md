@@ -45,6 +45,9 @@ cd simAutomata
 ```bash
 make docker-run
 ```
+```bash
+make docker-build
+```
 
 This will:
 - Build a Docker image with all required dependencies
