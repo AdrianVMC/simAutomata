@@ -1,46 +1,45 @@
-# .dockerignore para proyecto SIMAUTOMATA (Flet + Python)
-
-### Entornos de desarrollo ###
+# === Entornos virtuales ===
 venv/
 .venv/
 env/
 *.env
 .env*
-storage/ 
 
-### Caché y archivos temporales ###
+# === Archivos temporales y caché de Python ===
 __pycache__/
 *.py[cod]
 *.pyc
-*.pyd
 *.pyo
+*.pyd
 *.so
 .pytest_cache/
 .mypy_cache/
 .cache/
+coverage.xml
+htmlcov/
 
-### Archivos del sistema y editor ###
+# === Archivos del sistema y editores ===
 .DS_Store
 Thumbs.db
-.idea/
 .vscode/
+.idea/
 *.swp
 *.swo
 
-### Builds y distribuciones ###
+# === Directorios innecesarios para build ===
 build/
 dist/
 *.egg-info/
 *.egg
 *.spec
 
-### Logs y datos sensibles ###
+# === Datos locales o temporales ===
+storage/
 *.log
 *.sqlite
 *.db
 secrets.py
 config_local.py
 
-### Archivos de documentación ###
+# === Documentación generada (si usas Sphinx o similar) ===
 docs/_build/
-*.md~
