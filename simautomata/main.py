@@ -1,5 +1,3 @@
-# simautomata/main.py
-
 import flet as ft
 from simautomata import saludar
 
@@ -7,6 +5,7 @@ def main(page: ft.Page):
     page.title = "simAutomata - Inicio"
     page.theme_mode = ft.ThemeMode.LIGHT
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
+    page.horizontal_alignment = ft.MainAxisAlignment.CENTER
 
     nombre_input = ft.TextField(label="Escribe tu nombre")
     saludo_text = ft.Text()
@@ -21,6 +20,5 @@ def main(page: ft.Page):
         saludo_text
     )
 
-# Ejecutar como app Flet
 if __name__ == "__main__":
     ft.app(target=main)

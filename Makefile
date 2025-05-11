@@ -31,7 +31,7 @@ install: ## Instala las dependencias desde requirements.txt
 
 clean: ## Limpia archivos temporales y el entorno virtual
 	@echo "🧹 Cleaning..."
-	@rm -rf __pycache__ .pytest_cache $(VENV)
+	@rm -rf __pycache__ .pytest_cache
 
 # ---------------------
 # Docker-related targets
@@ -49,14 +49,6 @@ docker-run: docker-build ## Ejecuta el contenedor en modo web
 	@docker run -it --rm \
 		-p $(PORT):$(PORT) \
 		-e FLET_SERVER_PORT=$(PORT) \
-		$(DOCKER_IMAGE):latest
-
-docker-run-gui: ## Ejecuta el contenedor con soporte GUI (X11)
-	@echo "🖥️  Running with GUI support..."
-	@xhost +local:docker
-	@docker run -it --rm \
-		-e DISPLAY=$(DISPLAY) \
-		-v /tmp/.X11-unix:/tmp/.X11-unix \
 		$(DOCKER_IMAGE):latest
 
 docker-push: docker-build ## Empuja la imagen al registro Docker
