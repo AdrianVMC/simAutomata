@@ -4,6 +4,7 @@ venv/
 env/
 *.env/
 /storage/
+tests/
 
 # Archivos de configuración de entornos virtuales
 pyvenv.cfg
